@@ -1,5 +1,3 @@
 REGEXP_REPLACE(your_string_column, '(^|[^a-zA-Z0-9_])FICO[a-zA-Z0-9_]*.*', 'FICO') AS filtered_string
 
-SUBSTR(your_string_column, 
-         CHARINDEX('FICO', your_string_column), 
-         CHARINDEX(':', your_string_column, CHARINDEX('FICO', your_string_column)) - CHARINDEX('FICO', your_string_column)) AS filtered_string
+EGEXP_REPLACE(REGEXP_EXTRACT(your_string_column, '(^|[^a-zA-Z0-9_])FICO[a-zA-Z0-9_]*'), '.*FICO', 'FICO') AS filtered_string
