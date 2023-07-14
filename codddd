@@ -1,0 +1,1 @@
+REGEXP_REPLACE(your_string_column, '(^|[^a-zA-Z0-9_])FICO[a-zA-Z0-9_]*.*', 'FICO') AS filtered_string
