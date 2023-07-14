@@ -1,3 +1,4 @@
 REGEXP_REPLACE(your_string_column, '(^|[^a-zA-Z0-9_])FICO[a-zA-Z0-9_]*.*', 'FICO') AS filtered_string
 
-EGEXP_REPLACE(REGEXP_EXTRACT(your_string_column, '(^|[^a-zA-Z0-9_])FICO[a-zA-Z0-9_]*'), '.*FICO', 'FICO') AS filtered_string
+credit_data_v2_value,
+    ARRAY_JOIN(REGEXP_EXTRACT_ALL(credit_data_v2_value, '(^|[^a-zA-Z0-9_])FICO[a-zA-Z0-9_]*'), ', ') AS filtered_string
